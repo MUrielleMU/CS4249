@@ -22,3 +22,11 @@ a {
 .categoryName:hover {
   color: #3ac0fd;
 }
+
+.categoryBtn {
+  width: 70px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -11,7 +11,8 @@ const Intro = () => {
 
   const next = () => {
     // log trail id
-    if (current == 0) {
+    if (current === 0) {
+      localStorage.setItem("trial_id", trialID);
       loggingjs.logEvent(null, "enterTrailID", {
         eventName: "enterTrailID",
         info: { trialID },
@@ -56,7 +57,7 @@ const Intro = () => {
             className={styles.FCP}
             onClick={() => {
               if (localStorage) {
-                localStorage.setItem("isFCP", 1);
+                localStorage.setItem("isFCP", "true");
               }
             }}
           >
@@ -67,7 +68,7 @@ const Intro = () => {
             className={styles.CCP}
             onClick={() => {
               if (localStorage) {
-                localStorage.setItem("isFCP", 0);
+                localStorage.setItem("isFCP", "false");
               }
             }}
           >

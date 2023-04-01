@@ -31,4 +31,12 @@ export const customizedCategories = [
     category: "Real-Time Strategy",
     game: "Hogwarts Legacy",
   },
+  {
+    category: "Dating",
+    game: "Persona 5 Royal",
+  },
+  {
+    category: "All Sports",
+    game: "NBA 2K23",
+  },
 ];

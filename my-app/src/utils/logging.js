@@ -147,6 +147,8 @@ export const loggingjs = (function () {
     var eventName = customName || event.type;
     // By default, monitor some global state on every event.
     var infoObj = GLOBAL_STATE_TO_LOG();
+    var localStorage = window?.localStorage;
+    var trial_id = localStorage?.getItem("trial_id");
     // And monitor a few interesting fields from the event, if present.
     for (var key in EVENT_PROPERTIES_TO_LOG) {
       if (event && key in event) {
@@ -165,10 +167,10 @@ export const loggingjs = (function () {
     // var state = location.hash;
 
     if (ENABLE_CONSOLE_LOGGING) {
-      console.log(uid, time, eventName, target, info);
+      console.log(uid, trial_id, time, eventName, target, info);
     }
     if (ENABLE_NETWORK_LOGGING) {
-      sendNetworkLog(uid, time, eventName, target, info);
+      sendNetworkLog(uid, trial_id, time, eventName, target, info);
     }
   }
 
@@ -211,10 +213,11 @@ export const loggingjs = (function () {
 // Logging For Steam Experiment submission function
 // submits to the google form at this URL:
 // docs.google.com/forms/d/e/1FAIpQLSfU3vaT0ATB-gbYshOak8QCfeW9k_V_NTRUhErNWeh4c8Wapg/viewform
-function sendNetworkLog(uid, time, eventname, target, info) {
+function sendNetworkLog(uid, trial_id, time, eventname, target, info) {
   var formid = "e/1FAIpQLSfU3vaT0ATB-gbYshOak8QCfeW9k_V_NTRUhErNWeh4c8Wapg";
   var data = {
     "entry.52823697": uid,
+    "entry.1346796708": trial_id,
     "entry.2129126820": time,
     "entry.1281917858": eventname,
     "entry.385664242": target,

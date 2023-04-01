@@ -28,6 +28,22 @@
 
 .btnGroup {
   position: absolute;
-  bottom: 44px;
-  right: 500px;
+  bottom: 8%;
+  left: 50%;
+}
+
+.add2Cart {
+  background-color: #72af20;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.instantlyBuy {
+  background-color: #f7ed02;
+}
+
+.endTrialBtn {
+  position: absolute;
+  top: 200px;
+  right: 100px;
 }

@@ -2,6 +2,7 @@ import styles from "./index.module.css";
 import { Link } from "react-router-dom";
 import { loggingjs } from "@/utils/logging.js";
 import { allCategories } from "@/utils/categories";
+import * as cx from "classnames";
 import { Tooltip } from "antd";
 
 const FullCategory = (props) => {
@@ -55,8 +56,11 @@ const FullCategory = (props) => {
         </div>
       }
     >
-      <div className={btnClassName} onClick={logClickCategoryButton}>
-        Category
+      <div
+        className={cx(btnClassName, styles.categoryBtn)}
+        onClick={logClickCategoryButton}
+      >
+        <div>Category</div>
       </div>
     </Tooltip>
   );

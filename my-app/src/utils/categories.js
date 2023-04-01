@@ -56,6 +56,14 @@ export const allCategories = [
     game: "Hogwarts Legacy",
   },
   {
+    category: "Dating",
+    game: "Persona 5 Royal",
+  },
+  {
+    category: "All Sports",
+    game: "NBA 2K23",
+  },
+  {
     category: "For PC Cafés",
     game: "Darkest Dungeon Soundtrack",
   },
@@ -140,10 +148,6 @@ export const allCategories = [
     game: "Darkest Dungeon Soundtrack",
   },
   {
-    category: "Dating",
-    game: "Darkest Dungeon Soundtrack",
-  },
-  {
     category: "Farming & Crafting",
     game: "Darkest Dungeon Soundtrack",
   },
@@ -193,10 +197,6 @@ export const allCategories = [
   },
   {
     category: "Sports & Racing",
-    game: "Darkest Dungeon Soundtrack",
-  },
-  {
-    category: "All Sports",
     game: "Darkest Dungeon Soundtrack",
   },
   {
