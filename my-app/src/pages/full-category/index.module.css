@@ -1,0 +1,24 @@
+.wrapper {
+  width: 944px;
+  display: flex;
+  text-decoration: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #565860;
+  color: #fff;
+}
+
+.categoryName {
+  cursor: pointer;
+  width: 190px;
+  box-sizing: border-box;
+  padding: 2px 5px;
+}
+
+a {
+  color: #fff;
+}
+
+.categoryName:hover {
+  color: #3ac0fd;
+}

@@ -1,23 +1,26 @@
-import "./App.css";
-import Button from "@material-ui/core/Button";
-import { loggingjs } from "./logging";
-import old_homepage from "./img/old_homepage.svg";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "@/pages/Homepage/index.js";
+import Intro from "@/pages/introduction/index.js";
+import GamePage from "./pages/GamePage";
 
-function App() {
-  const loggingClick = () => {
-    loggingjs.logEvent(null, "clickCategoryBtn", {
-      eventName: "clickCategoryBtn",
-      info: { homepage: "OCP" },
-    });
-  };
-
+const App = () => {
   return (
-    <div className="App">
-      <div className="Btn" onClick={loggingClick}>
-        Category
-      </div>
-    </div>
+    <Routes>
+      <Route path="/">
+        <Route index element={<Intro />} />
+        <Route path="fcp" element={<Homepage isFCP={true} />} />
+        <Route path="ccp" element={<Homepage isFCP={false} />} />
+        <Route path="game/:name" element={<GamePage />} />
+        {/* <Route path="about" element={<About />} />
+        <Route path="dashboard" element={<Dashboard />} /> */}
+
+        {/* Using path="*"" means "match anything", so this route
+                acts like a catch-all for URLs that we don't have explicit
+                routes for. */}
+        {/* <Route path="*" element={<NoMatch />} /> */}
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

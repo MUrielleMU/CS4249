@@ -1,0 +1,28 @@
+.wrapper {
+  width: 160px;
+  background-color: #565860;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px;
+}
+
+.title {
+  font-size: 14px;
+  color: #3ac0fd;
+  font-weight: 500;
+}
+
+.categoryName {
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px 0px;
+  text-decoration: none;
+}
+
+.categoryName:hover {
+  color: #3ac0fd;
+}
+
+a {
+  color: #fff;
+}
