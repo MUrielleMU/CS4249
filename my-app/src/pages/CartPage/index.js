@@ -7,6 +7,9 @@ import EndTrialBtn from "@/pages/endTrialBtn";
 
 const Cart = () => {
   const localStorage = window?.localStorage;
+  const isFCP = localStorage?.getItem("isFCP");
+  const homepage = isFCP === "true" ? "/fcp" : "/ccp";
+
   let cart = localStorage.getItem("cart");
   if (cart) {
     cart = JSON.parse(cart);
@@ -43,7 +46,7 @@ const Cart = () => {
           )}
         </div>
         <div style={{ marginTop: 24 }}>
-          <Link to="/homepage">
+          <Link to={homepage}>
             <Button
               style={{
                 backgroundColor: "#348DE4",
