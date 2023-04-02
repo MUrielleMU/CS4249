@@ -39,12 +39,16 @@ const Intro = () => {
       title: "Step 1",
       description: "Enter your trial ID",
       content: (
-        <Input
-          value={trialID}
-          onChange={onInputChange}
-          allowClear
-          placeholder="Enter a number"
-        />
+        <>
+          <h4>Trial ID is showned in Arrangement table.</h4>
+          <p>E.g.: 1.2 means 2nd trial in Arrangement 1</p>
+          <Input
+            value={trialID}
+            onChange={onInputChange}
+            allowClear
+            placeholder="Enter a number"
+          />
+        </>
       ),
     },
     {
