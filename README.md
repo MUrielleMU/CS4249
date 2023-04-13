@@ -1,5 +1,3 @@
 # CS4249
 
-### 兜底游戏名：
-Darkest Dungeon Soundtrack
-只要用户选了这个游戏，就是选错了！
+The source code of 2023 CS4249 PG-05 project UIs.
